@@ -1,0 +1,400 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap');
+
+body {
+  font-family: "Raleway", "sans-serif", "Helvetica";
+}
+
+.home-page .top-header {
+  /* display: flex; */
+  display: block;
+  background: rgba(0, 0, 0, 0.078);
+}
+
+.top-header {
+  display: none;
+  background: rgba(0, 0, 0, 0.078);
+
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(0, 146, 246, 1) 0%, rgba(21, 110, 179, 1) 65%, rgba(217, 205, 205, 1) 100%);
+}
+
+.home-page .site-header {
+  background: transparent;
+}
+
+
+.fixed-img-wrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.fixed-img-wrapper img {
+  max-height: 100%;
+}
+
+header {
+  /* height: 20vh; */
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.dark .home,
+.dark .top-header {
+  background: rgba(0, 0, 0, 0.829);
+}
+
+.dark .header-wrapper {
+  background: rgba(0, 0, 0, 0.829);
+}
+
+.dark .gallery-container {
+  background: black;
+}
+
+.home-left {
+  margin-top: -180px;
+}
+
+.home .social-wrapper a {
+  background-color: #3c6484c1;
+}
+
+.home .more-mountains {
+  background-color: #3c6484eb;
+  bottom: 5%;
+  right: 0;
+}
+
+.slick-track {
+  display: flex !important;
+  gap: 24px;
+}
+
+.slick-track img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.slick-track img:hover {
+  transform: scale(1.1);
+}
+
+.slick-dots li button:before {
+  font-size: 8px;
+}
+
+.place {
+  min-height: 100vh;
+}
+
+.place-wrapper {
+  margin-top: 8%;
+}
+
+
+
+.place-item .overlay-content-wrapper {
+  padding: 10%;
+  z-index: 10000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(2, 51, 63, 0.521);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-weight: bold;
+}
+
+.overlay-content:hover {
+  background-color: rgba(2, 51, 63, 0.671);
+  cursor: pointer;
+
+}
+
+.todo,
+.signup {
+  min-height: 80vh;
+}
+
+.todo-wrapper {
+  margin-top: 6%;
+  padding: 2rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.todo-item,
+.place-item {
+  display: flex !important;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.todo-item>* {
+  width: 50% !important;
+}
+
+.todo-item-content {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.todo-item-content h1 {
+  font-size: 52px;
+}
+
+.todo .read-more-wrapper button {
+  background-color: #0B7FD3;
+}
+
+
+.slick-next:before {
+  content: '→';
+  color: #041928 !important;
+}
+
+.slick-prev:before {
+  content: '←';
+  color: #041928 !important;
+}
+
+
+.dark  .slick-next:before {
+  color: #fff !important;
+}
+
+.dark  .slick-prev:before {
+  color: #fff !important;
+}
+
+.todo .slick-track img,
+.place .slick-track img {
+  min-height: 220px;
+  max-height: 280px !important;
+  height: 100% !important;
+}
+
+.slick-dots {
+  bottom: -90px !important;
+}
+
+.todo .slick-dots li button:before {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.todo-item-img {
+  overflow: hidden
+}
+
+.todo-item-img img {
+  border-radius: 6px;
+}
+
+
+/* Gallery Items */
+.gallery-items {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.gallery-container {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-item {
+  grid-column: span 3;
+  min-height: 180px;
+  max-height: 200px;
+  height: 100%;
+}
+
+.gallery-wrapper .page-title {
+  position: relative;
+  color: #054d82;
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.dark .gallery-wrapper .page-title {
+  color: #fff;
+}
+
+
+.gallery-item .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-item img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery-item .overlay:hover {
+  background-color: #021b2c88;
+
+}
+
+.gallery-item-content,
+.gallery-item .overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+.gallery-item-content {
+  background-color: #0c53864a;
+}
+
+
+
+.gallery-item-content h2 {
+  background-color: #04253ada;
+  border-radius: 4px;
+  color: #fff;
+}
+
+
+
+.single-post-body p {
+  margin-bottom: 2rem;
+}
+
+.featured-img {
+  float: right;
+  padding: 1rem;
+}
+
+.featured-img img {
+  max-height: 320px;
+}
+
+/* Single Post */
+
+.single-post {
+  min-height: 100vh;
+}
+
+.single-post h2 {
+  font-size: 24px;
+  margin: 14px 0;
+}
+
+.dark .single-post {
+  background-color: black;
+  color: #fff;
+}
+
+.dark .single-post p {
+  margin: 14px 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.dark #root {
+  background: black;
+  color: #fff;
+}
+
+.signup-form-wrapper {
+  max-width: 620px;
+  width: 100%;
+}
+
+.signup-form-wrapper form,
+.contact form {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+
+.signup-form-wrapper input,
+.contact input {
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid rgb(231, 231, 231);
+}
+
+.signup-form-wrapper .fname,
+.signup-form-wrapper .lname {
+  width: 50%;
+}
+
+.checkbox {
+  width: auto !important;
+  margin-right: 0.5rem;
+}
+
+.form-group.name {
+  gap: 1rem;
+}
+
+.required {
+  font-size: 24px;
+  color: red;
+}
+
+footer {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(21, 110, 179, 1) 100%, rgba(217, 205, 205, 1) 100%);
+}
+
+.contact form {
+  max-width: 540px;
+}
+
+.contact label {
+  display: flex;
+  align-items: center
+}
+
+.contact .name input {
+  width: 50%
+}
+
+.contact {
+  min-height: 80vh;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  border: 1px solid rgb(112, 112, 112);
+}
